@@ -3,3 +3,7 @@ test-results/
 *.log
 .DS_Store
 .env*
+
+# Local lecture materials
+/*.[pP][dD][fF]
+/*.[zZ][iI][pP]

@@ -1,5 +1,5 @@
 import { questions } from './questions.js';
-export const STORAGE_KEY = 'cpp-midterm-practice:v1';
+export const STORAGE_KEY = 'cpp-midterm-practice:lecture-v2';
 export const isManual = q => ['debug', 'short'].includes(q.type);
 export function normalize(value, mode = 'output') {
   const s = String(value ?? '').trim();

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#3158d9">
-  <meta name="description" content="C++ 중간고사 25문제. OX, 객관식, 함수 빈칸, 값 추적, 오류 수정과 서술형을 풀고 해설로 복습하세요.">
+  <meta name="description" content="교수님 강의 1~5장을 바탕으로 만든 C++ 중간고사 25문제와 핵심 암기 47개. OX, 객관식, 함수 빈칸, 값 추적, 오류 수정과 서술형을 풀고 해설로 복습하세요.">
   <title>C++ 중간고사 연습실</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
@@ -25,12 +25,12 @@
       <div class="progress-card"><div class="row"><span>채점 완료</span><strong id="progress-text">0 <small>/ 25</small></strong></div><progress id="progress" max="25" value="0" aria-label="채점 완료 문제 수"></progress><p id="progress-caption">첫 문제부터 시작해 볼까요?</p></div>
       <nav class="mode-nav" aria-label="문제 모아 보기">
         <button data-mode="all" aria-pressed="true"><span><i aria-hidden="true">▦</i>전체 문제</span><b id="count-all">25</b></button>
-        <button id="memory-open" aria-pressed="false"><span><i aria-hidden="true">▤</i>핵심 암기</span><b id="count-memory">32</b></button>
+        <button id="memory-open" aria-pressed="false"><span><i aria-hidden="true">▤</i>핵심 암기</span><b id="count-memory">47</b></button>
         <button data-mode="wrong" aria-pressed="false"><span><i aria-hidden="true">↻</i>오답노트</span><b id="count-wrong">0</b></button>
         <button data-mode="bookmarks" aria-pressed="false"><span><i aria-hidden="true">☆</i>북마크</span><b id="count-bookmarks">0</b></button>
       </nav>
       <div class="navigator"><div class="row"><span class="small-label">문제 바로 가기</span><span id="filtered-count">25문제</span></div><div id="question-grid" class="question-grid" aria-label="문제 번호"></div><div class="legend"><span><i class="correct-dot"></i>정답</span><span><i class="wrong-dot"></i>오답</span><span><i class="draft-dot"></i>작성 중</span></div></div>
-      <details class="scope-details"><summary>출제 범위와 풀이 안내</summary><p>교재 1~5장과 10월 15일 실습의 개념을 바탕으로 만든 연습문제입니다. 실제 시험 기출문제는 아닙니다.</p><p>Chap. 0 별도 자료는 확인되지 않아, 관련 기초 문항은 C언어 변수·포인터 복습 수준으로 구성했습니다.</p><p>각 코드는 독립적이며 필요한 헤더와 using namespace std;는 작성되어 있다고 가정합니다.</p><p>오류 수정·서술형은 모범답안과 비교한 뒤 직접 채점합니다. 오답노트에는 한 번 틀렸던 문제가 계속 모입니다.</p></details>
+      <details class="scope-details"><summary>출제 범위와 풀이 안내</summary><p>교수님 강의 PDF 1~5장과 4·5장 추가 코드를 바탕으로 만든 연습문제입니다. 실제 시험 기출문제는 아닙니다. 각 항목의 쪽수는 제공된 PDF 페이지 기준입니다.</p><p>0a는 강의 안내이며, 안내에 나온 00_C++ 기초 학습 자료는 아직 확인되지 않았습니다. 핵심 암기의 기초 보충은 해당 강의 요약과 구별합니다.</p><p>각 코드는 독립적이며 필요한 헤더와 using namespace std;는 작성되어 있다고 가정합니다.</p><p>오류 수정·서술형은 모범답안과 비교한 뒤 직접 채점합니다. 오답노트에는 한 번 틀렸던 문제가 계속 모입니다.</p></details>
       <button id="reset-open" class="reset-link">풀이 기록 초기화</button>
     </aside>
     <main id="main" class="main">
