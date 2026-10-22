@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3158d9">
+  <meta name="description" content="C++ 중간고사 25문제. OX, 객관식, 함수 빈칸, 값 추적, 오류 수정과 서술형을 풀고 해설로 복습하세요.">
+  <title>C++ 중간고사 연습실</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#question">문제로 바로 가기</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="C++ 중간고사 연습실 홈"><span class="brand-icon">C<span>++</span></span><span>중간고사 연습실<small>COMPUTER LANGUAGE II</small></span></a>
+    <div class="top-actions"><span id="save-status" class="saved">이 브라우저에 자동 저장</span><button id="summary-open" class="button subtle">학습 현황 <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="학습 메뉴">
+      <div class="course-label">이번 시험 준비</div>
+      <h1>C++<br>한 문제씩, 확실하게.</h1>
+      <p class="sidebar-intro">개념부터 코드의 흐름까지.<br>풀고, 확인하고, 다시 익혀요.</p>
+      <div class="scope"><span class="scope-dot"></span>시험 범위 · Chap. 0–5</div>
+      <div class="progress-card"><div class="row"><span>채점 완료</span><strong id="progress-text">0 <small>/ 25</small></strong></div><progress id="progress" max="25" value="0" aria-label="채점 완료 문제 수"></progress><p id="progress-caption">첫 문제부터 시작해 볼까요?</p></div>
+      <nav class="mode-nav" aria-label="문제 모아 보기">
+        <button data-mode="all" aria-pressed="true"><span><i aria-hidden="true">▦</i>전체 문제</span><b id="count-all">25</b></button>
+        <button id="memory-open" aria-pressed="false"><span><i aria-hidden="true">▤</i>핵심 암기</span><b id="count-memory">32</b></button>
+        <button data-mode="wrong" aria-pressed="false"><span><i aria-hidden="true">↻</i>오답노트</span><b id="count-wrong">0</b></button>
+        <button data-mode="bookmarks" aria-pressed="false"><span><i aria-hidden="true">☆</i>북마크</span><b id="count-bookmarks">0</b></button>
+      </nav>
+      <div class="navigator"><div class="row"><span class="small-label">문제 바로 가기</span><span id="filtered-count">25문제</span></div><div id="question-grid" class="question-grid" aria-label="문제 번호"></div><div class="legend"><span><i class="correct-dot"></i>정답</span><span><i class="wrong-dot"></i>오답</span><span><i class="draft-dot"></i>작성 중</span></div></div>
+      <details class="scope-details"><summary>출제 범위와 풀이 안내</summary><p>교재 1~5장과 10월 15일 실습의 개념을 바탕으로 만든 연습문제입니다. 실제 시험 기출문제는 아닙니다.</p><p>Chap. 0 별도 자료는 확인되지 않아, 관련 기초 문항은 C언어 변수·포인터 복습 수준으로 구성했습니다.</p><p>각 코드는 독립적이며 필요한 헤더와 using namespace std;는 작성되어 있다고 가정합니다.</p><p>오류 수정·서술형은 모범답안과 비교한 뒤 직접 채점합니다. 오답노트에는 한 번 틀렸던 문제가 계속 모입니다.</p></details>
+      <button id="reset-open" class="reset-link">풀이 기록 초기화</button>
+    </aside>
+    <main id="main" class="main">
+      <div class="workspace-top"><div><span class="eyebrow">PRACTICE / 25 QUESTIONS</span><h2 id="view-title">오늘의 연습</h2></div><label class="type-filter"><span class="sr-only">문제 유형</span><select id="type-filter"><option value="all">모든 유형</option></select></label></div>
+      <div id="mode-description" class="mode-description">정답을 보기 전에, 먼저 내 생각을 적어 보세요.</div>
+      <article id="question" class="question-card" tabindex="-1"></article>
+      <section id="feedback" class="feedback" aria-live="polite" hidden></section>
+      <div id="question-actions" class="question-actions"><button id="previous" class="button">← 이전</button><span id="position" class="position"></span><div class="action-right"><button id="check" class="button primary">정답 확인</button><button id="next" class="button">다음 →</button></div></div>
+      <footer class="workspace-footer"><span>작은 차이를 이해하면, 코드의 흐름이 보여요.</span><span>OX 10 · 객관식 4 · 코드·서술 11</span></footer>
+      <section id="memory-view" hidden aria-label="파트별 핵심 암기"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="summary-dialog"><div class="dialog-heading"><span class="eyebrow">YOUR PROGRESS</span><button class="icon-button" data-close="summary-dialog" aria-label="학습 현황 닫기">×</button></div><h2>지금까지의 학습</h2><div id="summary-content"></div><button id="review-wrong" class="button primary wide">오답노트로 복습하기</button><button class="button wide dialog-dismiss" data-close="summary-dialog">계속 풀기</button><button id="summary-reset" class="reset-link">풀이·암기 기록 초기화</button></dialog>
+  <dialog id="reset-dialog"><div class="dialog-heading"><span class="eyebrow">FRESH START</span><button class="icon-button" data-close="reset-dialog" aria-label="초기화 취소">×</button></div><h2>처음부터 다시 풀까요?</h2><p>이 연습실에 저장된 답안, 채점 결과, 북마크, 암기 완료 표시가 지워집니다.</p><div class="dialog-actions"><button class="button" data-close="reset-dialog">취소</button><button id="reset-confirm" class="button danger">기록 지우고 시작</button></div></dialog>
+  <noscript><p class="noscript">문제를 풀려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+</body>
+</html>
