@@ -91,5 +91,5 @@ export const lessons = [
     <div class="understanding-checks">${checks.map((q,i)=>`<fieldset class="class-check" data-check="${q.id}"><legend><span>${i+1}</span>${esc(q.prompt)}</legend>${q.options.map((option,j)=>`<label><input type="radio" name="object-check-${q.id}" value="${j}"><span>${esc(option)}</span></label>`).join('')}<p class="check-result" role="status" hidden></p></fieldset>`).join('')}</div>
     <table class="lesson-table"><thead><tr><th>한 줄</th><th>머릿속으로 읽는 말</th></tr></thead><tbody><tr><td><code>p = &amp;obj;</code></td><td>기존 객체의 주소 저장</td></tr><tr><td><code>p = new Circle(3);</code></td><td>객체 생성 + 생성자 실행 + 주소 저장</td></tr><tr><td><code>p-&gt;setRadius(7);</code></td><td>가리키는 객체의 멤버 수정</td></tr><tr><td><code>delete p;</code></td><td>단일 동적 객체 소멸·해제</td></tr><tr><td><code>p = nullptr;</code></td><td>포인터 값만 대상 없음으로 변경</td></tr><tr><td><code>delete[] base;</code></td><td>배열 원소를 역순 소멸·해제</td></tr></tbody></table>
     ${takeaway('코드를 읽을 때 <strong>주소를 가진 변수 / 실제 객체 / 할당·해제 방식</strong>을 따로 확인하세요.')}
-    <a class="button primary" href="./">문제와 핵심 암기로 이어가기 →</a>`}
+    <a class="button primary" href="./references.html">5장 참조·복사 생성자로 →</a>`}
 ];
