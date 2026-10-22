@@ -7,6 +7,7 @@
 - 25문제: OX 10, 4지선다 4, 함수 빈칸 3, 값 추적 4, 오류 수정 2, 서술형 2
 - 핵심 암기 47개: 기초 보충 4개와 강의 1~5장 요약 43개
 - [클래스 이해하기](https://o3oc4t.github.io/cpp-midterm-practice/classes.html): Circle 예제로 배우는 9단계 설명, 한 줄씩 실행 흐름 추적, 두 객체의 반지름 조작, 이해 확인 5문항
+- [4장 객체 포인터·동적 생성](https://o3oc4t.github.io/cpp-midterm-practice/objects.html): 10단계 설명, 포인터 대상 변경 실습, 단일 객체·배열의 생성/소멸 추적, 이해 확인 6문항
 - 문제·암기카드별 강의 PDF 쪽수 표시
 - 자동 채점, 해설, 오답노트, 북마크, 답을 가리는 암기카드
 - 오류 수정·서술형은 모범답안과 비교하여 직접 채점
@@ -50,6 +51,8 @@ GitHub Pages는 `main` 브랜치의 `/docs`를 사용합니다.
 
 - `docs/classes.html`, `docs/class-content.js`, `docs/classes.js`: 클래스 설명과 실습 화면
 - `docs/class-model.js`: 예제 코드 및 객체 상태 시각화
+- `docs/objects.html`, `docs/object-content.js`, `docs/objects.js`: 4장 설명과 실습 화면
+- `docs/object-model.js`: 포인터, 동적 객체, 배열의 상태 및 생성·소멸 순서
 - `docs/questions.js`: 25문제와 정답·해설
 - `docs/memory.js`: 파트별 요약·암기카드 47개
 - `docs/sources.js`: 강의자료 정보와 쪽수 표기
@@ -57,6 +60,8 @@ GitHub Pages는 `main` 브랜치의 `/docs`를 사용합니다.
 - `docs/app.js`: 화면과 학습 흐름
 - `tests/engine.test.js`: 채점·저장·자료 참조 검증
 
-빈칸 완성·출력 추적·오류 수정 후 코드와 NRVO 설정 차이 등 14건을 GCC C++17 및 AddressSanitizer·UndefinedBehaviorSanitizer로 실행 검증했습니다. Node 테스트 13건과 PC Chromium에서 25문제 채점, 47개 암기카드, 저장·복원, 오답노트 흐름을 확인했습니다.
+빈칸 완성·출력 추적·오류 수정 후 코드와 NRVO 설정 차이 등 14건을 GCC C++17 및 AddressSanitizer·UndefinedBehaviorSanitizer로 실행 검증했습니다. Node 테스트 18건과 PC Chromium에서 25문제 채점, 47개 암기카드, 저장·복원, 오답노트 흐름을 확인했습니다.
 
 클래스 설명은 교수님 3장 Circle 예제를 바탕으로 새로 구성했습니다. 실습의 상태 변화는 지정된 C++ 예제를 시각화한 것이며 임의의 C++ 코드를 실행하는 컴파일러는 아닙니다. C++14로 전체 추적 코드·생성/소멸 코드·클래스 밖 구현을 실행하고, 두 객체에 0~8을 각각 전달하는 18회 호출 결과를 시각화와 대조했습니다. PC 브라우저에서 9개 설명, 앞/뒤 추적, 초기화, 이해 확인 5문항과 기존 학습 화면 연결을 검증했습니다.
+
+4장 설명은 교수님 강의 3~28쪽의 객체 포인터, 객체 배열, new/delete, CircleManager 내용을 바탕으로 구성했습니다. C++14 예제 7개를 AddressSanitizer·UndefinedBehaviorSanitizer로 실행하고, 포인터 실습의 18회 호출 결과를 시각화와 대조했습니다. 해제 후 객체 접근, 중복 해제, 시작 주소가 아닌 포인터 해제 등 잘못된 코드는 설명으로만 다루며 실행하지 않습니다.

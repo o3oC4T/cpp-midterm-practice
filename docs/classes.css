@@ -2,3 +2,5 @@
 
 .trace-layout{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;align-items:start}.trace-layout>div{min-width:0}.trace-layout .object-grid{gap:10px}.trace-layout .live-object{padding:15px 12px}.trace-layout .live-object .row{display:block}.trace-layout .live-object .row>span{display:block;margin-top:4px}.trace-layout .circle-stage{height:100px}.trace-layout .live-object>p{font-size:10px}.trace-layout .code-panel pre{font-size:12px}
 @media(max-width:1250px){.trace-layout{grid-template-columns:minmax(0,1fr)}.trace-layout .live-object .row{display:flex}.trace-layout .live-object .row>span{margin-top:0}}
+
+.course-bridge{display:block;font-size:12px;color:#486fae;line-height:1.7;text-decoration:none;margin:25px 10px}.course-bridge:hover{text-decoration:underline}

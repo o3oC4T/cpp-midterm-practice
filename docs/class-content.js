@@ -125,5 +125,5 @@ export const lessons = [
     <h3>자주 헷갈리는 문법도 확인해 두세요.</h3>
     <table class="lesson-table"><thead><tr><th>코드</th><th>확인할 점</th></tr></thead><tbody><tr><td><code>class Circle { ... };</code></td><td>클래스 정의 끝의 세미콜론 필요</td></tr><tr><td><code>void Circle(int r)</code></td><td>잘못된 생성자 선언: 반환형을 쓰지 않음</td></tr><tr><td><code>Circle c;</code></td><td>인자 없이 호출할 수 있는 생성자가 있어야 함</td></tr><tr><td><code>Circle c();</code></td><td>객체 생성이 아니라 Circle을 반환하는 함수 c의 선언</td></tr><tr><td><code>donut.getRadius()</code></td><td>함수를 호출할 때 괄호 사용</td></tr></tbody></table>
     ${takeaway('클래스는 <strong>자료형 정의</strong>, 객체는 <strong>실제 대상</strong>, 멤버 변수는 <strong>객체의 상태</strong>, 멤버 함수는 <strong>그 상태를 다루는 동작</strong>입니다.')}
-    <a class="button primary" href="./">문제와 핵심 암기로 이어가기 →</a>` }
+    <a class="button primary" href="./objects.html">4장 객체 포인터·동적 생성으로 →</a>` }
 ];
