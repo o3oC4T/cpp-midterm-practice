@@ -10,3 +10,5 @@ body{min-width:1000px}.answer-fieldset{border:0;margin:0;padding:0;min-width:0}.
 .memory-note>p{font-size:14px}.memory-code{font-size:12px}.memory-hook{font-size:13px}.code-panel pre{font-size:13px}
 
 .lecture-source{font-size:11px;line-height:1.7;color:#657593;margin:0 0 18px}.memory-note .lecture-source{font-size:10px;margin:-3px 0 12px}.flashcard .lecture-source{margin-bottom:20px}
+
+.mode-nav .class-lesson-link{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border:1px solid #ccd8f4;border-radius:8px;background:#f1f5ff;color:#3158b8;text-decoration:none;font-size:13px;font-weight:650;margin-bottom:7px}.class-lesson-link>b{font-size:10px;font-weight:500}.mode-nav .class-lesson-link:hover{background:#e6edff}
